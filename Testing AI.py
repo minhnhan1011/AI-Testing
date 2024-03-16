@@ -4,12 +4,14 @@ import cv2
 # Lưu file thuat toán Haar Cascade Frontal Face để tham khao
 alg = "haarcascade_frontalface_default.xml"
 
-# passing the algorithm to OpenCV
+# Sử dụng lớp CascadeClassifier để tải một file XML vào OpenCV:
 haar_cascade = cv2.CascadeClassifier(alg)
 
-# Dung camera de nhan dien khuon matc
+# Dung camera de nhan dien khuon mat
 cam = cv2.VideoCapture(0)
 
+
+# Thiết lập vòng lặp vô hạn để đọc từng frame đầu vào của camera và hàm read() sẽ trả về 2 giá trị
 while True:
     _, img = cam.read()
     text = "Face not detected"
