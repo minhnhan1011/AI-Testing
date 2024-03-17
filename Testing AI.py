@@ -26,7 +26,7 @@ while True:
         text = "Face Detected"
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
-# Hiện chữ treen ảnh
+# Hiện chữ trên ảnh
     print(text)
     image = cv2.putText(img, text, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
 
